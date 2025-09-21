@@ -1,3 +1,6 @@
+ng build
+ng build --configuration development
+
 <!-- Angular -->
 npm cache clean --force
 rm -rf node_modules

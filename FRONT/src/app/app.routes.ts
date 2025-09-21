@@ -5,7 +5,8 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { FormularioComponent } from './modules/formulario-display/formulario/formulario.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' }, // 🔹 Asegura que inicie en login
+  { path: '', 
+    loadComponent: () => import('./modules/home/home.component').then(c => c.HomeComponent) }, // 🔹 Asegura que inicie en login
   { path: 'login', component: LoginComponent },
   {
     path: '',
